@@ -1,0 +1,47 @@
+{
+    "1": {
+        "name": "Twitter",
+        "username": "@hexandcube",
+        "url": "https://twitter.com/hexandcube"
+    },
+    "2": {
+        "name": "Fediverse",
+        "username": "@hexandcube@mstdn.social",
+        "url": "https://mstdn.social/@hexandcube"
+    },
+    "3": {
+        "name": "Reddit",
+        "username": "u/hexandcube",
+        "url": "https://reddit.com/u/hexandcube"
+    },
+    "4": {
+        "name": "GitHub",
+        "username": "@hexandcube",
+        "url": "https://github.com/hexandcube"
+    },
+    "5": {
+        "name": "GitLab",
+        "username": "@hexandcube",
+        "url": "https://gitlab.com/hexandcube"
+    },
+    "6": {
+        "name": "YouTube",
+        "username": "Hexandcube",
+        "url": "https://youtube.com/hexandcube"
+    },
+    "7": {
+        "name": "Unsplash",
+        "username": "@hexandcube",
+        "url": "https://unsplash.com/hexandcube"
+    },
+    "8": {
+        "name": "Instagram",
+        "username": "@hexandcube",
+        "url": "https://instagram.com/hexandcube"
+    },
+    "9": {
+        "name": "Mozilla AMO",
+        "username": "Hexandcube",
+        "url": "https://addons.mozilla.org/en-US/firefox/user/14625252/"
+    }
+}

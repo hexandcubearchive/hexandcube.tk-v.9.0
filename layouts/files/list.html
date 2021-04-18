@@ -1,0 +1,32 @@
+{{ define "main" }}
+<ul class="breadcrumb no-margin">
+    <li class="breadcrumb-item">
+        <a href="/">Hexandcube</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+</ul>
+<h1>{{ .Title }}</h1>
+<p>This page lists all files published by Hexandcube. Click the name of the file to display the file description, metadata, versions and more.</p>
+{{ $paginator := .Paginate .Pages }}
+{{ range $paginator.Pages }}
+<div class="tile tile-centered my-5">
+    <div class="tile-icon hide-mobile">
+        <div class="files-tile-icon">
+            <i class="{{ .Params.Icon }} fa-fw"></i>
+        </div>
+    </div>
+    <div class="tile-content">
+        <h5 class="tile-title text-primary"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
+        <small class="tile-subtitle text-gray">{{ .Params.FileName }} · {{ .Params.FileType }} · {{ .Params.FileSize }}</small>
+    </div>
+    <div class="tile-action">
+        <a href="{{ .Params.download }}" class="btn btn-secondary" aria-label="Download"><i
+                class="fas fa-download"></i> <span class="hide-mobile">Download</span></a>
+        <a href="{{ .RelPermalink }}" class="btn btn-link" aria-label="More"><i class="fas fa-ellipsis-v"></i></a>
+    </div>
+</div>
+{{ end }}
+{{ partial "pagination.html" . }}
+{{ end }}

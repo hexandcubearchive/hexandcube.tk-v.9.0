@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+<ul class="breadcrumb no-margin">
+    <li class="breadcrumb-item">
+        <a href="/">Hexandcube</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="/files/">Files</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+</ul>
+
+<h1 class="no-margin">
+    {{ .Title }}
+</h1>
+
+{{ with .Content}}
+<h3 class="mt-6">Description</h3>
+{{ . }}
+{{ end }}
+
+<h3 class="mt-6">{{ if .Params.Versions }}Latest {{ end }}File Metadata</h3>
+<i class="fas fa-font fa-fw"></i> <b>File name: </b>{{ .Params.FileName }}
+<br>
+<i class="fas fa-file fa-fw"></i> <b>File type: </b>{{ .Params.FileType }} ({{ .Params.FileExtension }})
+<br>
+<i class="fas fa-weight fa-fw"></i> <b>File size: </b>{{ .Params.FileSize }}
+{{ if .Params.FileVersion }}
+<br>
+<i class="fas fa-code-branch fa-fw"></i> <b>File version: </b>{{ .Params.FileVersion }}
+{{ with .Params.FileDate }}({{ . }}){{ end }}
+{{ end }}
+
+<h3 class="mt-6">Download from</h3>
+
+<b><a href="{{ .Params.Download }}"><i class="fas fa-download"></i> {{ .Params.DownloadServer }}</a></b>
+{{ range .Params.Servers }}
+<br>
+<a href="{{ .download }}"><i class="fas fa-download"></i> {{ .name }}</a>
+{{ end }}
+
+{{ if .Params.Versions }}
+<h3 class="mt-6 ">All versions</h3>
+
+<b><a href="{{ .Params.Download }}"><i class="fas fa-download"></i> {{ .Params.FileVersion }}
+    (latest{{ with .Params.FileDate }} - {{ . }}{{ end }})</a></b>
+{{ range .Params.Versions }}
+<br>
+<a href="{{ .download }}"><i class="fas fa-download"></i> {{ .name }} {{ with .date }}({{ . }}){{ end }}</a>
+{{ end }}
+
+{{ end }}
+
+{{ end }}

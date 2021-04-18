@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{- partial "head.html" . -}}
+</head>
+
+<body class="dark">
+    
+    {{- partial "header.html" . -}}
+
+    <main id="content" class="container {{ if .Params.wideLayout }}grid-xl{{ else }}grid-sm{{end}}">
+        {{- block "main" . }}{{- end }}
+    </main>
+
+    {{- partial "footer.html" . -}}
+    {{- partial "scripts.html" . -}}
+
+    <noscript>
+        <style>
+            .noscript-hide {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+</body>
+
+</html>

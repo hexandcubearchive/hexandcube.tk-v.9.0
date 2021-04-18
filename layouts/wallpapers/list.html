@@ -1,0 +1,39 @@
+{{ define "main" }}
+<ul class="breadcrumb no-margin">
+    <li class="breadcrumb-item">
+        <a href="/">Hexandcube</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+</ul>
+<h1>{{ .Title }}</h1>
+<p>Here you can find some wallpapers that I've made for myself. All of them are avalible under the CC BY-SA 4.0 license.</p>
+{{ $paginator := .Paginate (sort .Pages "Params.id" "desc" ) }}
+<div class="columns">
+    {{ range $paginator.Pages }}
+    <div class="column col-4 col-lg-6 col-sm-12 p-2">
+        <a href="{{ .RelPermalink }}">
+            <img src="https://files.hexandcube.tk/wallpapers/thumbnails/Wallpaper-{{ .Params.id }}{{ with .Params.variant }}-{{ . }}{{ end }}.png"
+                class="img-responsive s-rounded thumbnail-clickable" alt="{{ .Title }}">
+        </a>
+        <div class="columns mt-2">
+            <div class="column col-9">
+                <h4 class="no-margin"><a class="text-heading font-secondary"
+                        href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                <small class="tile-subtitle text-gray">{{ .Params.Resolution }}</small>
+            </div>
+            <div class="column col-3">
+                <div class="text-right">
+                    <a href="{{ .Params.download }}" class="btn btn-secondary" aria-label="Download"><i
+                            class="fas fa-download"></i></a>
+                    <a href="{{ .RelPermalink }}" class="btn btn-link" aria-label="More"><i
+                            class="fas fa-ellipsis-v"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ partial "pagination.html" . }}
+{{ end }}

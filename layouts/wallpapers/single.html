@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<div class="columns mt-5">
+    <div class="column col-8 col-lg-12">
+        <img src="https://files.hexandcube.tk/wallpapers/Wallpaper-{{ .Params.id }}{{ with .Params.variant }}-{{ . }}{{ end }}.png"
+            class="img-responsive s-rounded mt-2" alt="{{ .Title }}">
+    </div>
+    <div class="column col-4 col-lg-12">
+        <ul class="breadcrumb no-margin no-padding">
+            <li class="breadcrumb-item">
+                <a href="/">Hexandcube</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/wallpapers/">Wallpapers</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+        </ul>
+        <h1 class="no-margin"> {{ .Title }}</h1>
+        {{ if .Content }}
+        <div>{{ .Content }}</div>
+        {{ else }}
+        <br>
+        {{ end }}
+        <div class="h5 mb-5">
+            <i class="fas fa-image fa-fw"></i> <b>Wallpaper ID: </b><span class="text-primary">{{ .Params.ID }}</span>
+            {{ with .Params.Variant }}
+            <br>
+            <i class="fas fa-tint fa-fw"></i> <b>Variant: </b><span class="text-primary">{{ . }}</span>
+            {{ end }}
+            <br>
+            <i class="fas fa-expand fa-fw"></i> <b>Resolution: </b><span
+                class="text-primary">{{ .Params.Resolution }}</span>
+            <br>
+            <i class="fas fa-balance-scale fa-fw"></i> <b>License: </b><a class="text-primary"
+                href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+            <br>
+            <i class="fas fa-user fa-fw"></i> <b>Author: </b><span class="text-primary">Hexandcube</span>
+        </div>
+            <a href="https://files.hexandcube.tk/wallpapers/Wallpaper-{{ .Params.id }}{{ with .Params.variant }}-{{ . }}{{ end }}.png"
+                class="btn w-full" download><i class="fas fa-download"></i> Download full resolution</a>
+            <a href="https://files.hexandcube.tk/wallpapers/thumbnails/Wallpaper-{{ .Params.id }}{{ with .Params.variant }}-{{ . }}{{ end }}.png"
+                class="btn btn-link mt-2 w-full" download><i class="fas fa-download"></i> Download the thumbnail</a>
+    </div>
+</div>
+
+{{ end }}

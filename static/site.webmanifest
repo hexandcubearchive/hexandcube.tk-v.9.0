@@ -1,0 +1,32 @@
+{
+    "name": "Hexandcube",
+    "short_name": "Hexandcube",
+    "icons": [
+        {
+            "src": "/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "shortcuts": [{
+            "name": "Files",
+            "url": "/files/"
+        },
+        {
+            "name": "Wallpapers",
+            "url": "/wallpapers/"
+        }
+    ],
+    "theme_color": "#ff565c",
+    "background_color": "#ff565c",
+    "display": "standalone",
+    "start_url": "https://hexandcube.tk",
+    "lang": "en-US"
+}

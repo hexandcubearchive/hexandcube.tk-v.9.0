@@ -1,0 +1,86 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script>
+    // Get status from Discord via lanyard.rest API
+    axios.get('https://api.lanyard.rest/v1/users/270592672073383938')
+        .then(res => {
+            const data = res.data.data;
+            const dot = document.querySelector("#status-dot");
+            const status = document.querySelectorAll(".status-status");
+            const avatarPresence = document.querySelectorAll(".status-avatar-presence");
+            const activityDiv = document.querySelector("#status-activity");
+            const activityName = document.querySelector("#status-activity-name");
+            const activityDetails = document.querySelector("#status-activity-details");
+            const activityState = document.querySelector("#status-activity-state");
+
+            switch (data.discord_status) {
+                case "online":
+                    dot.classList.add("bg-success");
+                    var currentStatus = "online";
+                    break;
+                case "idle":
+                    dot.classList.add("bg-warning");
+                    var currentStatus = "away";
+                    break;
+                case "dnd":
+                    dot.classList.add("bg-error");
+                    var currentStatus = "online";
+                    break;
+                default:
+                    dot.classList.add("bg-gray");
+                    var currentStatus = "offline";
+            }
+
+            avatarPresence.forEach((avatar) => {
+                avatar.classList.add(currentStatus);
+            })
+
+            var currentStatusText = currentStatus;
+
+            // Get activity details if available
+            if (data.activities.length !== 0) {
+                const activity = data.activities[0];
+
+                // Detect a custom status
+                if (activity.name == "Custom Status") {
+                    var activityEmoji = (activity.emoji) ? activity.emoji.name : "";
+                    // In case of a custom status, use activity.state as an activity name, unless activity.state is undefined.
+                    if (!activity.state && activity.emoji) {
+                        var currentStatusText = `${activityEmoji} ${currentStatus}`
+                    } else {
+                        var currentStatusText = `${activityEmoji} ${activity.state}`;
+                    }
+                } else {
+                    var currentStatusText = `<b>Playing</b> ${activity.name}`
+                }
+
+                if (activity.details || activity.state) {
+                    activityName.innerHTML = activity.name;
+                    activityDetails.innerHTML = activity.details;
+                    if (activity.details !== activity.state) {
+                        activityState.innerHTML = activity.state;
+                    }
+                    if (activity.name !== "Custom Status") {
+                        activityDiv.classList.remove("d-none");
+                    }
+                }
+            }
+            status.forEach((el) => {
+                el.innerHTML = currentStatusText;
+            })
+            dot.classList.remove("loading");
+        });
+
+    const statusModal = document.querySelector("#status-modal");
+    const statusModalOpen = document.querySelector("#status-modal-open")
+    const statusModalClose = document.querySelectorAll(".status-modal-close");
+
+    statusModalOpen.addEventListener("click", (event) => {
+        statusModal.classList.add("active");
+    })
+
+    statusModalClose.forEach((element) => {
+        element.addEventListener("click", (event) => {
+            statusModal.classList.remove("active");
+        })
+    })
+</script>

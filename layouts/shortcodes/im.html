@@ -1,0 +1,7 @@
+<ul>
+    {{ range .Site.Data.im}}
+    <li>{{ .name }} {{ if .notsecure }}<i class="fas fa-exclamation-triangle tooltip tooltip-right"
+            data-tooltip="   Not secure" style="margin-left:15px"></i>{{ end }} - <a href="{{ .url }}"
+            rel="me">{{ .username }}</a></li>
+    {{ end }}
+</ul>

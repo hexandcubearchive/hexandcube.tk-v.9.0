@@ -1,0 +1,43 @@
+baseURL = "https://hexandcube.tk"
+languageCode = "en-us"
+title = "Hexandcube"
+enableEmoji = true
+enableGitInfo = true
+paginate = 9
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  siteName = "hexandcube.tk"
+  author = "Hexandcube"
+  copyright = "Hexandcube"
+  copyrightedSince = "2017"
+  version = "9.0"
+  description = "Code tinkerer, translator and open source contributor from Poland"
+  keywords = "Hexandcube, Wallpapers, Files, JavaScript, Poland"
+  twitterCardType = "summary"
+  twitterSiteHandle = "@hexandcube"
+  twitterCreatorHandle = "@hexandcube"
+  
+[menu]
+
+  [[menu.main]]
+    identifier = "Home"
+    name = "Home"
+    url = "/"
+    weight = -110
+
+  [[menu.main]]
+    identifier = "files"
+    name = "Files"
+    url = "/files/"
+    weight = -100
+    
+  [[menu.main]]
+    identifier = "wallpapers"
+    name = "Wallpapers"
+    url = "/wallpapers/"
+    weight = -90

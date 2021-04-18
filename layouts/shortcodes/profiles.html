@@ -1,0 +1,5 @@
+<ul>
+    {{ range .Site.Data.profiles}}
+    <li>{{ .name }} - <a href="{{ .url }}" rel="me">{{ .username }}</a></li>
+    {{ end }}
+</ul>

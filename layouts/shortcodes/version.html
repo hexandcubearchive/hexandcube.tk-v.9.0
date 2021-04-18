@@ -1,0 +1,22 @@
+<div>
+    <b>Static Site Generator:</b> Hugo {{ .Site.Hugo.Version }} ({{ .Site.Hugo.CommitHash }})
+    <br>
+    <b>Git Commit Hash:</b> {{ .Page.GitInfo | jsonify}} {{ .Page.Kind }}
+    <br>
+    <b>Git Commit Author:</b>
+    <br>
+    <b>Git Commit Message:</b>
+    <br>
+    <b>Git Commit Date:</b>
+    <br>
+    <b>Build Date:</b>
+    <br>
+    <b>Build Enviroment:</b>
+    <br>
+    <b>Deployment Status:</b> <img
+        src="https://api.netlify.com/api/v1/badges/2a7264f7-6fc1-422a-9fa4-5233dded203b/deploy-status"
+        alt="Netlify Status">
+    <br>
+    <b>Build Logs:</b> <a
+        href="https://app.netlify.com/sites/hexandcube/deploys">https://app.netlify.com/sites/hexandcube/deploys</a>
+</div>

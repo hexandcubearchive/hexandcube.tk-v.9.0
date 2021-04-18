@@ -1,0 +1,8 @@
+Sitemap: https://hexandcube.tk/sitemap.xml
+
+User-agent: *
+Disallow: /scss
+Disallow: /opensource
+
+User-agent: ia_archiver
+Disallow: /

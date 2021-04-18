@@ -1,0 +1,19 @@
+<header class="navbar transition">
+    <section class="navbar-section">
+        {{ $currentPage := . }}
+        <a href="/" class="nav-link navbar-brand hexandcube-icon">h</a>
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}"
+            class="nav-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}nav-active{{end}}">{{ .Name }}</a>
+        {{ end }}
+        <div class="nav-link">
+            <label for="theme-toggle" id="theme-toggle-label">
+                <i class="far fa-sun"></i>
+            </label>
+            <input type="checkbox" class="is-hidden" id="theme-toggle" onclick="toggleTheme()" />
+        </div>
+    </section>
+    {{ partial "statusWidget/widget"}}
+</header>
+
+{{ partial "statusWidget/modal"}}

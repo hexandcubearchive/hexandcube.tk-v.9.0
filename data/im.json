@@ -1,0 +1,23 @@
+{
+    "1": {
+        "name": "Telegram",
+        "username": "@hexandcube",
+        "url": "https://t.me/hexandcube"
+    },
+    "2": {
+        "name": "Signal",
+        "username": "Ask me on any other platform",
+        "url": "#"
+    },
+    "3": {
+        "name": "Discord",
+        "username": "Hexandcube#1296",
+        "notsecure": true,
+        "url": "https://support.discord.com/hc/en-us/articles/218344397-How-do-I-add-my-friend-to-my-friends-list"
+    },
+    "4": {
+        "name": "Matrix",
+        "username": "@hexandcube:matrix.org",
+        "url": "https://matrix.to/#/@hexandcube:matrix.org"
+    }
+}

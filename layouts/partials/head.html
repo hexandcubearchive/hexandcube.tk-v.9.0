@@ -1,0 +1,38 @@
+<title>{{ if .Params.DefaultTitle}}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title}}</title>
+<meta charset="UTF-8">
+<meta name="description" content="{{ .Site.Params.Description }}">
+<meta name="keywords" content="{{ .Site.Params.Keywords }}">
+<meta name="author" content="{{ .Site.Params.Author }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ .Permalink }}img/opengraph.png" />
+<meta name="og:description" content="{{ .Site.Params.Description }}">
+<meta property="og:site_name" content="{{ .Site.Params.SiteName }}" />
+<meta name="twitter:card" content="{{ .Site.Params.TwitterCardType }}" />
+<meta name="twitter:site" content="{{ .Site.Params.TwitterSiteHandle }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.TwitterCreatorHandle}}" />
+
+{{ $styles := resources.Get "scss/main.scss" | resources.ToCSS }}
+
+{{- if .Site.IsServer }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ else }}
+{{- $processedStyles := $styles | minify | fingerprint | resources.PostProcess -}}
+<link rel="stylesheet" href="{{ $processedStyles.RelPermalink }}">
+{{ end }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#ff565c">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Hexandcube">
+<meta name="application-name" content="Hexandcube">
+<meta name="msapplication-TileColor" content="#ff565c">
+<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ff565c">

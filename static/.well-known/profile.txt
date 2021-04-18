@@ -1,0 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+This is a signature profile for Hexandcube (hexandcube@hexandcube.tk)
+Signed with a PGP key with fingerprint: 5681 BDD2 B70D 35BE 36AA  2598 5C37 F302 8185 8136
+
+Verify this profile at https://keyoxide.org/sig
+
+proof=dns:hexandcube.tk
+proof=https://twitter.com/hexandcube/status/1357226006642360322
+proof=https://gitlab.com/hexandcube/gitlab_proof
+proof=https://gist.github.com/hexandcube/cb06fdc2df516730e898bff3030d7a4e
+proof=https://mstdn.social/@hexandcube
+proof=https://www.reddit.com/user/hexandcube/comments/kbbx0t/openpgp_proof/
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEEVoG90rcNNb42qiWYXDfzAoGFgTYFAmAboB8ACgkQXDfzAoGF
+gTY/5gv/Z4jN0a/8vR6JB10CdMfCAtzsktHtNIr2qwDre18O6vV4eRY3/2jBBYLP
+e0xncS+4lrV9Qkju9up5r6gvM2HeT4Y08myHsnG4fshPB/JwYJZ/+UP6WTN5ziTV
+jzkanGstsoJBcKzjPEF4e/t8xf6zCj88hVqH6ULHIUkY5ST8CnUMDvs9SVrOA8ut
+IWkVxjWG4rbXG5lfl+M7oRXULDcCT0ryJ3MlcLa1ZT6t7QH0M7xOFaMqopYbqInA
+zUkHj+dugwlYNKl+dTre7ojCxOagNdurjdc3zXD08x7EUdksJl9LA4YMAJg0LSyq
+gG9AOCczrP+5rfA3qJ266XgkRIVt7TeUyvlJ7967QOrYCIIBOdluLCe999pRmXHx
+W4jLwD/Q1J/o8J4CKo6ObKGF+8vAa6BFoAW/SI8qhuVLDXMd4xiuqXmh4z7dIqtD
+Rl0RmyxEFNenHiPoXDJt97f4VTCBzg115/O+QvpTw1SsUrCfNsLpYTKuUzKUYztz
+E7A7vNXf
+=JGD6
+-----END PGP SIGNATURE-----

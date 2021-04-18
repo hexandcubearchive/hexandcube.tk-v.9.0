@@ -1,0 +1,20 @@
+<footer class="text-center mb-5">
+    <figure class="avatar avatar-lg c-hand" data-initial="He"
+        onclick="document.querySelector('#status-modal').classList.add('active');">
+        <img src="https://files.hexandcube.tk/images/avatar.png" alt="avatar">
+        <i class="avatar-presence status-avatar-presence"></i>
+    </figure>
+    <div class="mt-2 font-monospace">
+        <div class="font-secondary text-bold h5">hexandcube.tk</div>
+        {{ if .Page.GitInfo }}<div>Version
+                {{ .Site.Params.Version }}.{{ .GitInfo.AbbreviatedHash }}</div>{{ end }}
+        <div>Copyright <i class="far fa-copyright fa-sm"></i> {{ .Site.Params.CopyrightedSince }} -
+            {{ now.Format "2006" }}
+            {{ .Site.Params.Copyright }}</div>
+        <div>
+            <a href="/opensource/">Open Source Licenses</a>
+            <span class="hide-xs">|</span> <br class="show-xs">
+            <a href="/licenses/">Content Licenses</a>
+        </div>
+    </div>
+</footer>
