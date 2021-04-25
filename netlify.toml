@@ -3,17 +3,17 @@
 
 [context.production]
   publish = "public/"
-  command = "hugo --gc --minify --buildFuture"
+  command = "hugo --gc --buildFuture"
   environment = { HUGO_VERSION = "v0.80.0" }
 
 [context.deploy-preview]
   publish = "public/"
-  command = "hugo --gc --minify --buildFuture"
+  command = "hugo --gc --buildFuture"
   environment = { HUGO_VERSION = "v0.80.0" }
 
 [context.branch-deploy]
   publish = "public/"
-  command = "hugo --gc --minify --buildFuture"
+  command = "hugo --gc --buildFuture"
   environment = { HUGO_VERSION = "v0.80.0" }
 
 [dev]
