@@ -25,6 +25,10 @@ title: Open Source Licenses
 <i class="fas fa-book fa-fw"></i> Repository: [googlefonts/roboto](https://github.com/googlefonts/roboto)  
 <i class="fas fa-balance-scale fa-fw"></i> License [Apache-2.0 License](https://github.com/googlefonts/roboto/blob/main/LICENSE)
 
+#### Lanyard.rest
+<i class="far fa-user fa-fw"></i> Author: [Phineas Walton](https://phineas.io/)  
+<i class="fas fa-book fa-fw"></i> Repository: [Phineas/lanyard](https://github.com/Phineas/lanyard)  
+<i class="fas fa-balance-scale fa-fw"></i> License [MIT License](https://github.com/Phineas/lanyard/blob/main/LICENSE)
 #### Firefox
 
 <i class="far fa-user fa-fw"></i> Author: [Mozilla Corporation](https://mozilla.com)  
