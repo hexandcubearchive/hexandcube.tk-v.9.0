@@ -50,3 +50,17 @@
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
     data-cf-beacon='{"token": "ac63d331b6df43bd83a97ae8974d3212"}'></script>
+
+<!-- Service Worker -->
+<script>
+    if ('serviceWorker' in navigator) {
+        console.info("Service Worker supported, registering...")
+        navigator.serviceWorker.register('/serviceworker.js')
+            .then(reg => {
+                console.info(`Service Worker Registered (Scope: ${reg.scope})`);
+            })
+            .catch(error => {
+                console.error(`Service Worker registration failed: (${error})`);
+            });
+    } else console.warn("Service worker not available: not supported by browser")
+</script>
