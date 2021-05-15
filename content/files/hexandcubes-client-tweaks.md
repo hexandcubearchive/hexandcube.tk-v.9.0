@@ -6,7 +6,7 @@ fileExtension: zip
 fileSize: 26KB
 fileVersion: "1.0 [1.16.5]"
 fileDate: 2021-05-06
-icon: fas fa-fire
+image: /img/files/ClientTweaks.png
 download: https://files.hexandcube.tk/download/HexandcubesClientTweaks/Hexandcubes_Client_Tweaks-1.0.zip
 downloadServer: Hexandcube Files
 servers: 

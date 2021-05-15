@@ -253,6 +253,13 @@ i.tooltip::after{
     margin-top: 10px;
 }
 
+.files-tile-image {
+    background-color: var(--background);
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+}
+
 .page-item::before {
     display: none;
 }

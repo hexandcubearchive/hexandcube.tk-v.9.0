@@ -13,9 +13,13 @@
 {{ range $paginator.Pages }}
 <div class="tile tile-centered my-5">
     <div class="tile-icon hide-mobile">
+        {{ with .Params.Image }}
+        <img src="{{ . }}" class="files-tile-image img-responsive" alt="Icon">
+        {{ else }}
         <div class="files-tile-icon">
             <i class="{{ .Params.Icon }} fa-fw"></i>
         </div>
+        {{ end }}
     </div>
     <div class="tile-content">
         <h5 class="tile-title text-primary"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
