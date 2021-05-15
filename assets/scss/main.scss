@@ -97,6 +97,11 @@ ul.breadcrumb>li:before {
     content: "";
 }
 
+input, textarea {
+    background-color: var(--gray) !important;
+    color: var(--text) !important;
+}
+
 #content {
     margin-top: 3rem;
     margin-bottom: 3rem;

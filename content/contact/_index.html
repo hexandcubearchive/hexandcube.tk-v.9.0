@@ -1,0 +1,23 @@
+---
+title: Contact
+---
+
+<h1>Contact</h1>
+
+{{< im >}}
+
+<h3>Contact Form</h3>
+
+<form class="form-group" action="/pages/messagesent" method="POST" data-netlify="true" netlify-honeypot="hny-pot" name="Contact Form">
+    <p style="display: none;">
+        <label>Don not fill this out if you’re human: <input name="hny-pot" /></label>
+    </p>
+    <label class="form-label" for="name">Name</label>
+    <input class="form-input" type="text" id="name" name="Name" placeholder="" required>
+    <label class="form-label" for="email">Email</label>
+    <input class="form-input" type="email" id="email" name="Email" placeholder="" required>
+    <label class="form-label" for="email">Message</label>
+    <textarea class="form-input" id="email" rows="5" name="Message" placeholder="" required></textarea>
+    <br>
+    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+</form>

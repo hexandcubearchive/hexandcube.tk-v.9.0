@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{ if .Params.hideTitle }}
+{{ else }}
 <h2>{{ .Title }}</h2>
+{{ end }}
 {{ .Content }}
 {{ end }}
