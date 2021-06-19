@@ -25,7 +25,8 @@
             </div>
             <div class="column col-3">
                 <div class="text-right">
-                    <a href="{{ .Params.download }}" class="btn btn-secondary" aria-label="Download"><i
+                    <a href="https://files.hexandcube.tk/wallpapers/Wallpaper-{{ .Params.id }}{{ with .Params.variant }}-{{ . }}{{ end }}.png"
+                        class="btn btn-secondary" aria-label="Download"><i
                             class="fas fa-download"></i></a>
                     <a href="{{ .RelPermalink }}" class="btn btn-link" aria-label="More"><i
                             class="fas fa-ellipsis-v"></i></a>
