@@ -8,7 +8,8 @@
     </li>
 </ul>
 <h1>{{ .Title }}</h1>
-<p>Here you can find some wallpapers that I've made for myself. All of them are avalible under the CC BY-SA 4.0 license.</p>
+<p>Here you can find some wallpapers that I've made for myself. All of them are available under the CC BY-SA 4.0
+    license.</p>
 {{ $paginator := .Paginate (sort .Pages "Params.id" "desc" ) }}
 <div class="columns">
     {{ range $paginator.Pages }}
