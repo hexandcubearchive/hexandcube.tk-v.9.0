@@ -17,9 +17,9 @@ versions:
   - name: "2.0 Beta [1.17.1]"
     download: https://files.hexandcube.tk/download/HexandcubesClientTweaks/Hexandcubes_Client_Tweaks-2.0_Beta.zip
     date: 2021-08-17
-  - name: "1.0 [1.16.5]"
-    download: https://files.hexandcube.tk/download/HexandcubesClientTweaks/Hexandcubes_Client_Tweaks-1.0.zip
-    date: 2021-05-06
+#  - name: "1.0 [1.16.5]"
+#    download: https://files.hexandcube.tk/download/HexandcubesClientTweaks/Hexandcubes_Client_Tweaks-1.0.zip
+#    date: 2021-05-06
 ---
 
 Vanilla Minecraft experience with improvements like:
@@ -61,7 +61,11 @@ This pack works on the client side so should work with Vanilla Multiplayer serve
 
 If you want to use OptiFine, you have to add it manually by placing the Optifine jar in the mods folder. I cannot add Optifine to the mod pack due to its license.
 
-Compatible with the [MultiMC Launcher](https://multimc.org/).
+Compatible with the [MultiMC Launcher](https://multimc.org/). To 
 
 <a class="btn btn-primary" href="https://www.curseforge.com/minecraft/modpacks/hexandcubes-client-tweaks/download/3300734?client=y" target="_blank"><i class="fas fa-fire"></i> Install on CurseForge</a>
 <a class="btn" href="https://www.curseforge.com/minecraft/modpacks/hexandcubes-client-tweaks" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Project Page</a>
+
+A beta for Minecraft 1.17.1 is available. Changelog is available on [CurseForge](https://www.curseforge.com/minecraft/modpacks/hexandcubes-client-tweaks/files/3429527).
+
+<a class="btn btn-primary" href="https://www.curseforge.com/minecraft/modpacks/hexandcubes-client-tweaks/download/3429527?client=y" target="_blank"><i class="fas fa-fire"></i> Install beta on CurseForge</a>
