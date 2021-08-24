@@ -1,15 +1,18 @@
 ---
 title: Desktop Icon Toggle for Windows
-fileName: DesktopIconToggle.zip
+fileName: DesktopIconToggle-1.2.0.zip
 fileType: ZIP File Archive
 fileExtension: .zip
-fileSize: 2.2MB
-fileVersion: "1.1"
-fileDate: 2021-06-22
+fileSize: 2.1MB
+fileVersion: "1.2"
+fileDate: 2021-08-24
 image: /img/files/desktopicontoggle.png
-download: https://files.hexandcube.tk/download/DesktopIconToggle/DesktopIconToggle-1.1.zip
+download: https://files.hexandcube.tk/download/DesktopIconToggle/DesktopIconToggle-1.2.0.zip
 downloadServer: Hexandcube Files
 versions:
+  - name: "1.1"
+    download: https://files.hexandcube.tk/download/DesktopIconToggle/DesktopIconToggle-1.1.zip
+    date: 2021-06-22
   - name: "1.0"
     download: https://files.hexandcube.tk/download/DesktopIconToggle/DesktopIconToggle-1.0.zip
     date: 2021-06-19
