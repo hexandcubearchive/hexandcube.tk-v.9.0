@@ -37,5 +37,5 @@ Desktop icon by Icons8
 `choco install desktopicontoggle`
 
 <a class="btn btn-primary" href="https://chocolatey.org/install" target="_blank"><i class="fas fa-download"></i> Install Chocolatey</a>
-<a class="btn" href="https://community.chocolatey.org/packages/desktopicontoggle/1.1.0#testingResults" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Package Page</a>
+<a class="btn" href="https://community.chocolatey.org/packages/desktopicontoggle" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Package Page</a>
 
